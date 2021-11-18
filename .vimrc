@@ -3,7 +3,7 @@ execute "set tags+=/wine/tags"
 execute "set tags+=/trunk/tags"
 set nu
 set ic "ignore case
-set ts=2
+set tabstop=2 shiftwidth=2 expandtab
 set shiftwidth=2
 set hlsearch
 set incsearch
