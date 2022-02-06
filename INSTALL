@@ -1,6 +1,15 @@
-omf
+#install fish
 
-omf theme ays
+apt install -y fish
+
+chsh -s /usr/bin/fish
+
+#install omf
+curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
+
+#omf
+#omf theme ays
+omf install ays
 
 
 #install vim-plug
