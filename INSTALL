@@ -12,8 +12,8 @@ curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install 
 omf install ays
 
 
-#install vim-plug
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
-#[ https://github.com/junegunn/vim-plug ]
+# on mac os
+brew install --cask  wezterm
+brew install font-hack-nerd-font
+brew install starship
+brew install nvim
