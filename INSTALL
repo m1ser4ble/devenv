@@ -17,3 +17,6 @@ brew install --cask  wezterm
 brew install font-hack-nerd-font
 brew install starship
 brew install nvim
+
+# Install Tmux Plugin Manager
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
