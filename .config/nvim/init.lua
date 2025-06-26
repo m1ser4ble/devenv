@@ -1,0 +1,204 @@
+-- Bootstrap lazy.nvim
+require("config.lazy")
+
+-- Setup lazy.nvim
+--require("lazy").setup({
+--  spec = {
+----{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
+----  { "nvim-lualine/lualine.nvim" },
+----  { "nvim-telescope/telescope.nvim", dependencies = { "nvim-lua/plenary.nvim" } },
+--  {"nvim-treesitter/nvim-treesitter", branch = 'master', lazy = false, build = ":TSUpdate"},
+--	-- lsp servers
+--	{
+--		"neovim/nvim-lspconfig",
+--		opts = {
+--			inlay_hints = { enabled = false },
+--			---@type lspconfig.options
+--			servers = {
+--				cssls = {},
+--				tailwindcss = {
+--					root_dir = function(...)
+--						return require("lspconfig.util").root_pattern(".git")(...)
+--					end,
+--				},
+--				tsserver = {
+--					root_dir = function(...)
+--						return require("lspconfig.util").root_pattern(".git")(...)
+--					end,
+--					single_file_support = false,
+--					settings = {
+--						typescript = {
+--							inlayHints = {
+--								includeInlayParameterNameHints = "literal",
+--								includeInlayParameterNameHintsWhenArgumentMatchesName = false,
+--								includeInlayFunctionParameterTypeHints = true,
+--								includeInlayVariableTypeHints = false,
+--								includeInlayPropertyDeclarationTypeHints = true,
+--								includeInlayFunctionLikeReturnTypeHints = true,
+--								includeInlayEnumMemberValueHints = true,
+--							},
+--						},
+--						javascript = {
+--							inlayHints = {
+--								includeInlayParameterNameHints = "all",
+--								includeInlayParameterNameHintsWhenArgumentMatchesName = false,
+--								includeInlayFunctionParameterTypeHints = true,
+--								includeInlayVariableTypeHints = true,
+--								includeInlayPropertyDeclarationTypeHints = true,
+--								includeInlayFunctionLikeReturnTypeHints = true,
+--								includeInlayEnumMemberValueHints = true,
+--							},
+--						},
+--					},
+--				},
+--				html = {},
+--				yamlls = {
+--					settings = {
+--						yaml = {
+--							keyOrdering = false,
+--						},
+--					},
+--				},
+--				lua_ls = {
+--					-- enabled = false,
+--					single_file_support = true,
+--					settings = {
+--						Lua = {
+--							workspace = {
+--								checkThirdParty = false,
+--							},
+--							completion = {
+--								workspaceWord = true,
+--								callSnippet = "Both",
+--							},
+--							misc = {
+--								parameters = {
+--									-- "--log-level=trace",
+--								},
+--							},
+--							hint = {
+--								enable = true,
+--								setType = false,
+--								paramType = true,
+--								paramName = "Disable",
+--								semicolon = "Disable",
+--								arrayIndex = "Disable",
+--							},
+--							doc = {
+--								privateName = { "^_" },
+--							},
+--							type = {
+--								castNumberToInteger = true,
+--							},
+--							diagnostics = {
+--								disable = { "incomplete-signature-doc", "trailing-space" },
+--								-- enable = false,
+--								groupSeverity = {
+--									strong = "Warning",
+--									strict = "Warning",
+--								},
+--								groupFileStatus = {
+--									["ambiguity"] = "Opened",
+--									["await"] = "Opened",
+--									["codestyle"] = "None",
+--									["duplicate"] = "Opened",
+--									["global"] = "Opened",
+--									["luadoc"] = "Opened",
+--									["redefined"] = "Opened",
+--									["strict"] = "Opened",
+--									["strong"] = "Opened",
+--									["type-check"] = "Opened",
+--									["unbalanced"] = "Opened",
+--									["unused"] = "Opened",
+--								},
+--								unusedLocalExclude = { "_*" },
+--							},
+--							format = {
+--								enable = false,
+--								defaultConfig = {
+--									indent_style = "space",
+--									indent_size = "2",
+--									continuation_indent_size = "2",
+--								},
+--							},
+--						},
+--					},
+--				},
+--			},
+--			setup = {},
+--		},
+--	},
+--	{
+--		"neovim/nvim-lspconfig",
+--		opts = function()
+--			local keys = require("lazyvim.plugins.lsp.keymaps").get()
+--			vim.list_extend(keys, {
+--				{
+--					"gd",
+--					function()
+--						-- DO NOT RESUSE WINDOW
+--						require("telescope.builtin").lsp_definitions({ reuse_win = false })
+--					end,
+--					desc = "Goto Definition",
+--					has = "definition",
+--				},
+--			})
+--		end,
+--	},
+--
+--  { "mason-org/mason.nvim",
+--    opts = {
+--        ui = {
+--            icons = {
+--                package_installed = "✓",
+--                package_pending = "➜",
+--                package_uninstalled = "✗"
+--            }
+--        }
+--    }
+--  },
+--  --{ "catppuccin/nvim", name = "catppuccin", priority = 1000 }
+--  { "ellisonleao/gruvbox.nvim", priority = 1000 },
+--
+--  {
+--    "scottmckendry/cyberdream.nvim",
+--    lazy = false,
+--    priority = 1000,
+--    opts = {
+--    transparent = true,
+--    },
+--  },
+--  {
+--    "mason-org/mason-lspconfig.nvim",
+--    opts = {},
+--    dependencies = {
+--        { "mason-org/mason.nvim", opts = {} },
+--        "neovim/nvim-lspconfig",
+--    },
+--  },
+--  {
+--  "ibhagwan/fzf-lua",
+--  -- optional for icon support
+--  dependencies = { "nvim-tree/nvim-web-devicons" },
+--  -- or if using mini.icons/mini.nvim
+--  -- dependencies = { "echasnovski/mini.icons" },
+--  opts = {}
+--  },
+--
+--  },
+--  -- Configure any other settings here. See the documentation for more details.
+--  -- colorscheme that will be used when installing plugins.
+--  install = { colorscheme = { "habamax" } },
+--  -- automatically check for plugin updates
+--  checker = { enabled = true },
+--})
+
+--vim.o.background = "dark" -- or "light" for light mode
+--vim.cmd([[colorscheme gruvbox]]
+vim.cmd("colorscheme catppuccin")
+
+vim.cmd("set mouse=")
+
+local keymap = vim.keymap
+local opts = { noremap = true, silent = true }
+keymap.set("n", "dw", 'vb"_d')
