@@ -40,7 +40,8 @@ require("lazy").setup({
 		-- { import = "lazyvim.plugins.extras.coding.yanky" },
 		-- { import = "lazyvim.plugins.extras.editor.mini-files" },
 		-- { import = "lazyvim.plugins.extras.util.project" },
-		--{ import = "plugins" },
+		{ import = "lazyvim.plugins.extras.ai.copilot" },
+		{ import = "plugins" },
 	},
 	defaults = {
 		-- By default, only LazyVim plugins will be lazy-loaded. Your custom plugins will load during startup.
